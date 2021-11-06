@@ -18,4 +18,52 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
+    background-color:rgb(20, 25, 20);
+}
+
+.container {
+    padding: 3rem;
+    width: 30rem;
+}
+
+.checkbox-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    color: honeydew;
+    font-size: 2rem;
+}
+
+.checkbox-wrapper > input {
+    appearance: none;
+    border-radius: 5rem;
+    width: 8rem;
+    height: 4rem;
+    background-color: rgb(105, 105, 105);
+    position: relative;
+}
+
+.checkbox-wrapper > input::before {
+    content: '';
+    background-color: white;
+    box-shadow: 3px 2px 6px rgba(0,0,0,.3);
+    width: 3.5rem;
+    height: 3.5rem;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 6.25%;
+    left: 4.2%;
+    transition: all .2s ease-out;
+}
+
+.checkbox-wrapper > input:checked {
+    background-color: yellowgreen;
+}
+
+.checkbox-wrapper > input:checked::before {
+    left: 53%;
+    box-shadow: -3px 2px 6px rgba(0,0,0,.3);
+
 }
